@@ -4,6 +4,13 @@ body {
 
 .header {
     overflow: hidden;
-    background-color: green;
     padding: 20px, 10px;
+    background-color: green;
+    width: 100%;
 }
+
+.header h1 {
+    font-family: monospace;
+    font-size: 50px;
+}
+/*https://www.w3schools.com/howto/howto_css_responsive_header.asp*/
