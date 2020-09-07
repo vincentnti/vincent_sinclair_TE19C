@@ -2,15 +2,29 @@ body {
     background-color: #5CDB95;
 }
 
+h1, p {
+    padding-left: 20px;
+    padding-right: 20px;
+    color: white;
+    font-size: 30px;
+}
+
+p {
+    font-size: 25px;
+}
+
 .header {
     overflow: hidden;
     padding: 20px, 10px;
-    background-color: green;
     width: 100%;
 }
 
-.header h1 {
-    font-family: monospace;
-    font-size: 50px;
+.header a {
+    font-family: 'Grandstander', cursive;
+    font-size: 25px;
+    color: #05386B;
+    padding-left: 8.3%;
+    text-decoration: none;
 }
+
 /*https://www.w3schools.com/howto/howto_css_responsive_header.asp*/
