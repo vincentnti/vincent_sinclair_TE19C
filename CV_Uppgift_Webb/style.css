@@ -1,3 +1,5 @@
+
+    
 body {
     background-color: #5CDB95;
 }
@@ -9,6 +11,9 @@ h1, p {
     font-size: 30px;
 }
 
+h1{
+    font-family: 'Montserrat', sans-serif !important;
+}
 p {
     font-size: 25px;
 }
@@ -23,8 +28,22 @@ p {
     font-family: 'Grandstander', cursive;
     font-size: 25px;
     color: #05386B;
-    padding-left: 8.3%;
-    text-decoration: none;
+    text-decoration: none; 
+
+    width: 25%;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    text-align: center;
+    width: 24.2%;
+    display: inline-block;
 }
 
 /*https://www.w3schools.com/howto/howto_css_responsive_header.asp*/
