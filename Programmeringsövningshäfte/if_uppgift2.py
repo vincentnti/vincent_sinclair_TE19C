@@ -1,11 +1,12 @@
 tal = float(input("Tal: "))
     
-if tal - int(tal) > 0:
-    print("Talet är udda")
+if tal % 2 == 0:
+    print("Talet är jämt")
 else:
-    print("Talet är jämnt")
+    print("Talet är udda")
 
 """
+inte klar antar jag
 jdfkölafjafkljdfjöjföjlad:
     print("Talet ä delbart med 5")
 
