@@ -1,3 +1,4 @@
+#Uppgift 2
 bas = float(input("Basen av triangeln: "))
 höjd = float(input("Höjden av triangeln: "))
 
