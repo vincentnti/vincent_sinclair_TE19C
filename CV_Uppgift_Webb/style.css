@@ -1,23 +1,41 @@
-
+@font-face {
+    font-family: taner_ardali;
+    src: url(Taner\ Ardali\ -\ Antikor\ Text\ Light.ttf)
+}
     
 body {
-    background-color: #5CDB95;
+    background-color: #111111;
+    font-family: taner_ardali;
 }
 
-h1, p {
-    padding-left: 20px;
-    padding-right: 20px;
+.icon {
     color: white;
+    padding-left: 1%;
+}
+.greeting {
+    padding: 4% 0% 0% 3%;
     font-size: 30px;
+    color: white;
 }
 
-h1{
-    font-family: 'Montserrat', sans-serif !important;
+.info {
+    color: white;
 }
+
 p {
     font-size: 25px;
 }
 
+.navigation {
+    margin-top: 280px;
+}
+.navigation a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none !important; 
+}
+
+/*
 .header {
     overflow: hidden;
     padding: 20px, 10px;
@@ -25,9 +43,8 @@ p {
 }
 
 .header a {
-    font-family: 'Grandstander', cursive;
     font-size: 25px;
-    color: #05386B;
+    color: white;
     text-decoration: none; 
 
     width: 25%;
@@ -40,10 +57,7 @@ p {
     margin: 0;
     padding: 0;
 }
-li {
-    text-align: center;
-    width: 24.2%;
-    display: inline-block;
-}
+*/
+
 
 /*https://www.w3schools.com/howto/howto_css_responsive_header.asp*/
