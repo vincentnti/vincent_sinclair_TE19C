@@ -7,7 +7,11 @@ body {
     background-color: #111111;
     font-family: taner_ardali;
 }
-
+img {
+    width: 5%;
+    padding: 0;
+    margin: 0;
+}
 .icon {
     color: white;
     padding-left: 1%;
@@ -18,16 +22,19 @@ body {
     color: white;
 }
 
-.info {
+.desc {
     color: white;
+    margin-top: -20px;
+    padding-left: 4%;
+    margin-left: -0.8%;
+    font-size: 25px !important;
 }
-
-p {
+.desc p {
     font-size: 25px;
 }
 
 .navigation {
-    margin-top: 280px;
+    margin-top: 370px;
 }
 .navigation a {
     font-size: 25px;
