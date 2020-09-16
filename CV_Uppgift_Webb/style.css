@@ -8,11 +8,17 @@ div {
 body {
     background-color: #111111;
     font-family: taner_ardali;
-}
-img {
-    width: 5%;
-    padding: 0;
     margin: 0;
+}
+.school {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+.showcase {
+    display: flex;
 }
 .icon {
     color: white;
@@ -23,7 +29,6 @@ img {
     font-size: 30px;
     color: white;
 }
-
 .desc {
     color: white;
     margin-top: -20px;
@@ -33,6 +38,19 @@ img {
 }
 .desc p {
     font-size: 25px;
+}
+
+.course_desc {
+    color: black;
+    margin-top: -20px;
+    font-size: 25px !important;
+}
+.course_container {
+    background-color: white;
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    margin-left: 50%;
 }
 
 .navigation {
