@@ -10,13 +10,13 @@
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
     </head>
     <body>
-        <h1 class="icon">(~˘▾˘)~</h1>
+        <h1 class="icon">Logo</h1>
         <div class="greeting">
-            <h1 >Hej!</h1>
             <h1 id="writer"></h1>
+            <h1 id="writer2"></h1>
         </div>
         <div class="desc">
-            <p>En elev som går på NTI Kronhus gymnasiet.</p>
+            <p id="writer3"></p>
         </div>
         <div class="navigation">
             <ul>
@@ -26,16 +26,35 @@
                 <li><a href="school.html">Om skolan</a></li>
             </ul>
         </div>
+
+
+
+
+
         <script>
             var i = 0;
-            var txt = "Jag är Vincent Sinclair";
-            var speed = 62;
+            var f = 0;
+            var g = 0;
+            var txt = "Hej!"
+            var txt2 = "Jag är Vincent Sinclair";
+            var txt3 = "En elev som går på NTI Kronhus gymnasiet."
+            var speed = 100;
 
             function typeWriter(){
                 if(i < txt.length) {
                     document.getElementById("writer").innerHTML += txt.charAt(i);
                     i++;
-                    setTimeout(typeWriter, speed)
+                    setTimeout(typeWriter, speed);
+                }
+                if(f < txt2.length) {
+                    document.getElementById("writer2").innerHTML += txt2.charAt(f);
+                    f++;
+                    setTimeout(typeWriter, speed);
+                }
+                if (g < txt3.length) {
+                    document.getElementById("writer3").innerHTML += txt3.charAt(g);
+                    g++;
+                    setTimeout(typeWriter, speed);
                 }
             }
             window.onload = typeWriter();
