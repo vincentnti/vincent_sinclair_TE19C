@@ -9,3 +9,5 @@
 - [ ] Fixa Kurser och Om mig för att inkludera information hitta en layout i stort sätt
 - [ ] Logo
 - [ ] Array med olika desc till Om Mig sidan?
+
+beep
