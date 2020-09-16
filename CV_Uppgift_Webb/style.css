@@ -44,29 +44,7 @@ img {
     text-decoration: none !important; 
 }
 
-/*
-.header {
-    overflow: hidden;
-    padding: 20px, 10px;
-    width: 100%;
-}
 
-.header a {
-    font-size: 25px;
-    color: white;
-    text-decoration: none; 
-
-    width: 25%;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-*/
 
 
 /*https://www.w3schools.com/howto/howto_css_responsive_header.asp*/
