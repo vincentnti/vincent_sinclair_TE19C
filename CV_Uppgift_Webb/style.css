@@ -2,7 +2,9 @@
     font-family: taner_ardali;
     src: url(Taner\ Ardali\ -\ Antikor\ Text\ Light.ttf)
 }
-    
+div {
+    color: white;
+}
 body {
     background-color: #111111;
     font-family: taner_ardali;
