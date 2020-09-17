@@ -1,0 +1,57 @@
+.megabox {
+    height: 720px;
+    margin: 150px;
+    margin-top: 0;
+}
+.megabox-container {
+    height: 720px;
+    margin: 0;
+    padding: 0;
+}
+.megabox-container h1 {
+    padding: 0;
+    font-size: 60px;
+}
+
+.megabox-container-image {
+    width: 50%;
+    min-height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.megabox-container-image img {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    filter: grayscale(100%);
+}
+
+.megabox-container-image-color {
+    filter: grayscale(0) !important;
+}
+
+.megabox-container-text {
+    width: 50%;
+    min-height: 100%;
+    float: right;
+    display: inline-flex;
+}
+.megabox-container-text-content {
+    margin: auto 5px;
+}
+
+.megabox-container-text p {
+    font-weight: 600;
+    margin: 30px;
+}
+
+.megabox-container-list {
+    list-style: none;
+}
+.megabox-container-list li {
+    list-style: none;
+    padding-top: 10px;
+}
+
+

@@ -10,60 +10,20 @@ Vilka färger du tänker använda
 
 
 HTML sidor som skall vara med i projektet:
-Om mig		(me.html)
-Kurser   		(courses.html)
-Fritidsintressen 	(interests.html)
-Om skolan               (school.html)
+Om mig		(me.html) DONE
+Kurser   		(courses.html) DONE
+Fritidsintressen 	(interests.html) DONE
+Om skolan               (school.html) DONE
 
 Text
-En text om er själva kan vara påhittat då det kan vara svårt att komma på saker att skriva om
+En text om er själva kan vara påhittat då det kan vara svårt att komma på saker att skriva om DONE
 
 Länkar och bilder
-Minst 3 bilder
-Minst 4 länkar
-Relativ	(./nice.html)
-Absolut	(/home/herman/nice.html)
+Minst 3 bilder DONE
+Minst 4 länkar ?
+Relativ	(./nice.html) DONE
+Absolut	(/home/herman/nice.html) DONE
 
 
 Färger: Finns exempel på desktop
 
-
-
-
-
-
-
-Rester:
-<!--
-        <div class="header">
-            <ul>
-                <li><a href="me.html">Om mig</a></li>
-                <li><a href="courses.html">Kurser</a></li>
-                <li><a href="interests.html">Intressen</a></li>
-                <li><a href="school.html">Om Skolan</a></li>
-            </ul>
-        </div>-->
-
-/*
-.header {
-    overflow: hidden;
-    padding: 20px, 10px;
-    width: 100%;
-}
-
-.header a {
-    font-size: 25px;
-    color: white;
-    text-decoration: none; 
-
-    width: 25%;
-    text-align: center;
-    justify-content: space-between;
-}
-
-.header ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-}
-*/

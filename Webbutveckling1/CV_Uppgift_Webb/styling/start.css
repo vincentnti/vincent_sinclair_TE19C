@@ -1,0 +1,37 @@
+.mainbox {
+    padding: 0px;
+}
+.megabox-container-logo {
+    padding-left: 1%;
+}
+.mainbox-container-greeting {
+    padding: 4% 0% 0% 3%;
+    width: 50%;
+    font-size: 30px;
+    color: white;
+}
+.mainbox-container-greeting-sub {
+    color: white;
+    margin-top: -20px;
+    padding-left: 1%;
+    margin-left: -0.8%;
+    font-size: 25px !important;
+}
+.mainbox-container-text {
+    padding-left: 3.2%;
+    width: 900px;
+    color: white;
+    font-size: 15;
+    float: left;
+}
+.mainbox-containter-text-sub {
+    font-weight: bold;
+}
+.mainbox-container-image img {
+    margin-top: -250px;
+    float: left;
+    padding-right: 150px;
+    width: 400px;
+    filter: grayscale(100%);
+    transform: scaleX(-1);
+}
