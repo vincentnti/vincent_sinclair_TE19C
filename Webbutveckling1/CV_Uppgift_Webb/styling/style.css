@@ -20,7 +20,7 @@ body {
     width: 4%;
 }
 .mainbox {
-
+    padding: 0px;
 }
 .mainbox-container-greeting {
     padding: 4% 0% 0% 3%;
