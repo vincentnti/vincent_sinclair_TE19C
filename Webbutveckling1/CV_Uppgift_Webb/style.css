@@ -10,13 +10,7 @@ body {
     font-family: taner_ardali;
     margin: 0;
 }
-.school {
-    display: block;
-    width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 1%;
-}
+
 .showcase {
     display: flex;
 }
@@ -43,10 +37,72 @@ body {
 .course_desc {
     color: black;
     margin-top: -20px;
+    padding: 30px;
     font-size: 25px !important;
 }
+.course_desc ul {
+    list-style: none;
+}
+
+.school {
+    display: block;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1%;
+}
+
+.megabox {
+    background-color: red;
+    height: 720px;
+    margin: 150px;
+
+}
+.megabox-container {
+    height: 720px;
+    margin: 0;
+    padding: 0;
+}
+.megabox-container h1 {
+    padding: 80px;
+    padding-bottom: 40px;;
+    font-size: 60px;
+}
+
+.megabox-container-image {
+    background-color: blue;
+    width: 50%;
+    min-height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+}
+.megabox-container-image img {
+    width: 100%;
+    margin: auto;
+    padding: 0;
+    filter: grayscale(100%);
+}
+
+.megabox-container-text {
+    background-color: green;
+    width: 50%;
+    min-height: 100%;
+    float: right;
+}
+.megabox-container-list {
+    list-style: none;
+}
+.course-list  li {
+    list-style: none;
+    padding-top: 10px;
+}
+.megabox-container-text p {
+    font-weight: 600;
+    margin: 30px;
+}
+
 .course_container {
-    background-color: white;
     width: 50%;
     height: 100%;
     position: absolute;
