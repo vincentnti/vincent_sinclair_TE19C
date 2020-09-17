@@ -17,6 +17,7 @@ body {
 .icon {
     color: white;
     padding-left: 1%;
+    width: 4%;
 }
 .greeting {
     padding: 4% 0% 0% 3%;
