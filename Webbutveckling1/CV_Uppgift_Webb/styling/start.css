@@ -35,3 +35,8 @@
     filter: grayscale(100%);
     transform: scaleX(-1);
 }
+@media screen and (max-width: 1524px) {
+    .mainbox-container-image img {
+        display: none !important;
+    }
+}
