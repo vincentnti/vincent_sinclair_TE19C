@@ -1,5 +1,4 @@
-x = 1
+x = 0
 for i in range(1,100):
-    x = i + (i + 1)
-
-print(i)
+    x += i
+print(x)
