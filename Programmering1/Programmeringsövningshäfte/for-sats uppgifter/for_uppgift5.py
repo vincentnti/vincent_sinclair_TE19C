@@ -15,10 +15,10 @@ for i in range(start, end):
 #C
 counter = 1
 x = 0
-for i in range(1,101):
+for i in range(1,111):
     print(counter * x)
     counter += 1
     if counter > 10:
         counter = 1
         x += 1
-#tio fattas, bara att fixa
+
