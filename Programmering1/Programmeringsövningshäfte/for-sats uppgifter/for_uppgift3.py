@@ -1,4 +1,5 @@
-x = 0
-for i in range(1,100):
-    x += i
-print(x)
+svar = []
+for i in range(1,101):
+    svar.append(i)
+print(svar)
+print(sum(svar))
