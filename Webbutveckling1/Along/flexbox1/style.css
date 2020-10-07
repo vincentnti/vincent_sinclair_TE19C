@@ -1,0 +1,16 @@
+body {
+    background-color: whitesmoke;
+}
+.container {
+    display: flex;
+}
+.item {
+    flex-grow: 1;
+    height: 100px;
+    background-color: #A2CBFA;
+    border: 1px solid #4390E1;
+    border-radius: 3px;
+}
+.item + .item {
+    margin-left: 2%;
+}

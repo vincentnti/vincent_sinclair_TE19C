@@ -1,8 +1,6 @@
-i = 0
-s = 0
+i = 0 #iterator
+s = 0 #sum
 while i <= 100:
-    s += i
+    print(s, end=" ")
     i += 1
-    print(s,i)
-
-#KAN SKRIVAS OM
+    s = s + i

@@ -1,5 +1,5 @@
 import random
-
+import sympy
 random_number = random.randint(0,101)
 #print(random_number)
 
@@ -13,4 +13,6 @@ while guess != random_number:
         print("Guess Lower!")
     elif guess < random_number:
         print("Guess Higher!")
+    if sympy.isprime(random_number):
+        print("It's a prime number!")
 
