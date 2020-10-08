@@ -6,19 +6,20 @@ grid = [1,2,3,4,5,6,7,8,9] # Board positions
 playerOneMark = "X"
 playerTwoMark = "O"
 def drawBoard():
-    print("#########################")
-    print(f"#   {grid[0]}   #   {grid[1]}   #   {grid[2]}   #")
-    print("#########################")
-    print(f"#   {grid[3]}   #   {grid[4]}   #   {grid[5]}   #")
-    print("#########################")
-    print(f"#   {grid[6]}   #   {grid[7]}   #   {grid[8]}   #")
-    print("#########################")
+    print("—————————————————————————")
+    print(f"|   {grid[0]}   |   {grid[1]}   |   {grid[2]}   |")
+    print("—————————————————————————")
+    print(f"|   {grid[3]}   |   {grid[4]}   |   {grid[5]}   |")
+    print("—————————————————————————")
+    print(f"|   {grid[6]}   |   {grid[7]}   |   {grid[8]}   |")
+    print("—————————————————————————")
 
 def isMovePossible(placePos):
     if grid[placePos] != playerOneMark and grid[placePos] != playerTwoMark:
         return True
     else: 
         return False
+
 def makeMove ():
     placePos = int(input("Choose available grid position: "))
     if isMovePossible(placePos - 1) != True:
