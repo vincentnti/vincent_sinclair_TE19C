@@ -15,7 +15,7 @@ def drawBoard():
     print("#########################")
 
 def isMovePossible(placePos):
-    if grid[placePos] != "X" and grid[placePos] != "O":
+    if grid[placePos] != playerOneMark and grid[placePos] != playerTwoMark:
         return True
     else: 
         return False
