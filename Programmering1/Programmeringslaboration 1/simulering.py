@@ -14,13 +14,14 @@ def calc_distance (x_coordinate, y_coordinate):
 def random_coordinates ():
     print("t")
 
+#To know wheter a point is within the circle we can check wheter the distance from the origon to the point is less than the radius of the circle
 def in_circle (distance):
     if distance <= radius:
         return True
     else:
         return False
 
-distance = calc_distance(1, 1)
+distance = calc_distance(-0.5, -0.5)
 print("Distance: " + str(distance))
 ans = in_circle(distance)
 print(ans)
