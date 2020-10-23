@@ -4,10 +4,6 @@ import random
 #Point coordinates
 #point = {"x_coordinate" : 0.0, "y_coordinate" : 0.0}
 
-
-
-
-
 class Board:
     points = []
     radius = 1
