@@ -17,21 +17,21 @@ class Board:
             self.Points.append(Point())
         self.total_throws = throw_amount
 
-        print(self.total_throws) #Debug
+        #print(self.total_throws) #Debug
 
     def check_board (self):
         for point in self.Points:
             distance = self.calc_distance(point.x, point.y)
             if self.in_circle(distance):
                 self.hits += 1
-                point.hit == True
+                point.hit = True
             else:
                 self.misses += 1
-                point.hit == False
+                point.hit = False
         self.hit_ratio = self.hits / self.total_throws
 
     def calc_distance(self, x,y):
-        return math.sqrt(x**2 + y**2)
+        return math.sqrt(abs(x**2) + abs(y**2))
 
     def in_circle(self, distance):
         if distance <= self.circle_radius:
@@ -45,20 +45,46 @@ class Board:
         print("Misses: ", self.misses)
         print("Hit ratio: ", self.hit_ratio, "%")
 
-        #The reason the hit ratio multiplied by 4 gives us something close to pi is because of...
+        #The reason the hit ratio multiplied by 4 gives us something close to pi is because...
+        #What we are doing is getting the ratio in which one dart will hit the dart board.
+        #Imagine dividing the board into 4 pieces the ratio we get will apply to all four of the pieces
+        #Multiplying the ratio with 4 will instead give us the ratio between the diameter and the distance around the circle
+        #Note: Even when changing the radius the answer still gets close to pi
         print("Hit radio multiplied by 4: ", self.hit_ratio * 4) 
     
-    def display_board(self):
-        plt.Circle((0,0), self.circle_radius)
-        for point in self.Points:
+    def convert_point_to_dart(self, points):
+        darts = []
+
+        for point in points:
             if point.hit:
-                circle = plt.Circle((point.x, point.y), 0.1, color="green")
+                darts.append(plt.Circle((point.x,point.y), radius=0.01, linewidth=1, color="Green", zorder=0))
             else:
-                circle = plt.Circle((point.x, point.y), 0.1, color="red")
-        plt.title("potato")
-        fig, ax = plt.subplots()
-        ax.add_artist(circle)
+                darts.append(plt.Circle((point.x,point.y), radius=0.01, linewidth=1, color="Red", zorder=0)) 
+        
+        return darts
+
+    def add_darts_to_board(self, axes, darts):
+        for dart in darts:
+            axes.add_patch(dart)
+
+    def set_graph_options(self):
+        plt.axis("scaled")
+        plt.title("Board")
+        plt.grid()
+
+    def display_board(self):
+        axes = plt.gca() #Setup axis
+
+        dart_board = plt.Circle((0,0), radius=self.circle_radius, fill=False, linewidth=3, zorder=1) # Set dart board
+        axes.add_patch(dart_board)
+
+        darts = self.convert_point_to_dart(self.Points)
+        self.add_darts_to_board(axes, darts)
+
+        self.set_graph_options()
+
         plt.show()
+
 class Point:
     x: int
     y: int
@@ -68,9 +94,7 @@ class Point:
         self.x = random.uniform(-1,1)
         self.y = random.uniform(-1,1)
 
-random.seed() #Idk if necessary prob not (gonna remove it later)
-
-board = Board(1000000)
+board = Board(10000)
 board.check_board()
 board.results()
 board.display_board()
