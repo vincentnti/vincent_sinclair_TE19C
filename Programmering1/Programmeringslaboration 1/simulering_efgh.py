@@ -52,14 +52,17 @@ class Board:
         plt.Circle((0,0), self.circle_radius)
         for point in self.Points:
             if point.hit:
-                plt.plot((point.x, point.y), color="green")
+                circle = plt.Circle((point.x, point.y), 0.1, color="green")
             else:
-                plt.plot((point.x, point.y), color="red")
+                circle = plt.Circle((point.x, point.y), 0.1, color="red")
+        plt.title("potato")
+        fig, ax = plt.subplots()
+        ax.add_artist(circle)
         plt.show()
 class Point:
     x: int
     y: int
-    hit: bool
+    hit = False
 
     def __init__ (self):
         self.x = random.uniform(-1,1)
