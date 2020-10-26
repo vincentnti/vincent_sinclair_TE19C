@@ -1,6 +1,7 @@
 import math
 import random
-#import math.plot.lib
+import matplotlib.pyplot as plt
+
 class Board:
     circle_radius = 1
 
@@ -23,8 +24,10 @@ class Board:
             distance = self.calc_distance(point.x, point.y)
             if self.in_circle(distance):
                 self.hits += 1
+                point.hit == True
             else:
                 self.misses += 1
+                point.hit == False
         self.hit_ratio = self.hits / self.total_throws
 
     def calc_distance(self, x,y):
@@ -44,11 +47,19 @@ class Board:
 
         #The reason the hit ratio multiplied by 4 gives us something close to pi is because of...
         print("Hit radio multiplied by 4: ", self.hit_ratio * 4) 
-        
-        
+    
+    def display_board(self):
+        plt.Circle((0,0), self.circle_radius)
+        for point in self.Points:
+            if point.hit:
+                plt.plot((point.x, point.y), color="green")
+            else:
+                plt.plot((point.x, point.y), color="red")
+        plt.show()
 class Point:
     x: int
     y: int
+    hit: bool
 
     def __init__ (self):
         self.x = random.uniform(-1,1)
@@ -59,4 +70,5 @@ random.seed() #Idk if necessary prob not (gonna remove it later)
 board = Board(1000000)
 board.check_board()
 board.results()
+board.display_board()
 
