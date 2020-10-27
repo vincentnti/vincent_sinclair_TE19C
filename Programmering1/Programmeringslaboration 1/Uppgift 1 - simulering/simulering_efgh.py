@@ -44,12 +44,13 @@ class Board:
         print("Hits: ", self.hits)
         print("Misses: ", self.misses)
         print("Hit ratio: ", self.hit_ratio, "%")
-
-        #The reason the hit ratio multiplied by 4 gives us something close to pi is because...
-        #What we are doing is getting the ratio in which one dart will hit the dart board.
-        #Imagine dividing the board into 4 pieces the ratio we get will apply to all four of the pieces
-        #Multiplying the ratio with 4 will instead give us the ratio between the diameter and the distance around the circle
-        #Note: Even when changing the radius the answer still gets close to pi
+        """
+        Anledningen träff förhållandet gånger 4 ger oss något nära pi är:
+        Det vi igentligen nästan gör är att delar arean av cirkeln på arean av rektangeln för att få förhållandet mellan dem.
+        När radien är 1 blir arean på cirkeln Pi och arean på rektangeln 4. Ifall vi multiplicerar förhållandet med 4 får vi Pi.
+        Oavsätt var radien är kommer förhållandet vara samma, detta gör då att vi alltid kan ta förhållandet mellan cirkeln och
+        kvadraten multiplicerat med 4 för att få Pi.
+        """
         print("Hit radio multiplied by 4: ", self.hit_ratio * 4) 
     
     def convert_point_to_dart(self, points):
@@ -98,4 +99,3 @@ board = Board(10000)
 board.check_board()
 board.results()
 board.display_board()
-
