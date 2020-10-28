@@ -15,9 +15,8 @@ class Board:
     def __init__ (self, throw_amount):
         for _ in range(0, throw_amount):
             self.Points.append(Point())
-        self.total_throws = throw_amount
 
-        #print(self.total_throws) #Debug
+        self.total_throws = throw_amount
 
     def check_board (self):
         for point in self.Points:
@@ -28,6 +27,7 @@ class Board:
             else:
                 self.misses += 1
                 point.hit = False
+                
         self.hit_ratio = self.hits / self.total_throws
 
     def calc_distance(self, x,y):
