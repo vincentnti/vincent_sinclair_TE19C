@@ -95,7 +95,9 @@ class Point:
         self.x = random.uniform(-1,1)
         self.y = random.uniform(-1,1)
 
-board = Board(10000)
+board = Board(10000) #Initialize a board object and thow given amount
+
+#Call object methods
 board.check_board()
 board.results()
 board.display_board()
