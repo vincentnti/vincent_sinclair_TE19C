@@ -7,7 +7,8 @@ print("A_distance:", math.sqrt(0.5**2 + 0.5**2))
 print("B_distance:", math.sqrt(1**2 + 1**2))
 
 #C
-#Då distansen från origo alltid kommer vara positivt och **2 inte konverterar ett negativt tall till positivt i python av någon anledning
+#Då distansen från origo alltid kommer vara positivt 
+#och **2 inte konverterar ett negativt tal till positivt i python av någon anledning när talet inte är kopplat till en variabel
 #kan vi använda oss av abs() för att alltid ha positiva värden
 print("Some examples of this not working ", "Ex1: ", -1**2, "Ex2: ", (1**2) + (-1**2))
 
