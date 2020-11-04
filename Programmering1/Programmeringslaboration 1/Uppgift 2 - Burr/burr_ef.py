@@ -1,51 +1,49 @@
 import random
 
-class Iterator:
-    start: int
-    end: int
-    
-    def __init__(self):
-        self.take_input()
+class Handler:
+    iterator_start: int
+    iterator_end: int
 
-    def take_input(self):
+    chosen_burr: int
+    chosen_birr: int
+
+    def __init__ (self):
+        print("-Input whole numbers to iterate upon-")
+        self.set_iterator_values() 
+
+        print("-Input whole numbers for Burr and Birr-")
+        self.set_burrbirr_values()
+
+    def set_iterator_values(self):
         #Takes input and checks if it's acceptable if not have the user try again.
         try:
-            self.start = int(input("Start värde: "))
-            self.end = int(input("Slut värde: "))
-            self.end += 1
+            self.iterator_start = int(input("Start värde: "))
+            self.iterator_end = int(input("Slut värde: "))
+            self.iterator_end += 1
 
-            if (self.end < self.start):
+            if (self.iterator_end < self.iterator_start):
                 print("Error: No iterating backwards!")
-                self.take_input()
+                self.set_iterator_values()
         except:
-            print("Error: That was not a positive whole number!")
-            self.take_input()
+            print("Error: That was not a whole number!")
+            self.set_iterator_values()
 
-class Burr_Birr:
-    chosen_burr: int
-    chose_birr: int
-    def __init__ (self):
-        self.set_variables()
-
-    def set_variables(self):
-        #Takes input and checks if it's acceptable if not have the user try again.
+    def set_burrbirr_values (self):
+         #Takes input and checks if it's acceptable if not have the user try again.
         try:
             self.chosen_burr = int(input("Set Burr: "))
             self.chosen_birr = int(input("Set Birr: "))
         except:
             print("Error: That was not a whole number")
-            self.set_variables()
-
-print("-Input whole numbers to iterate upon-")
-iterator = Iterator() #Initialize the iterator object
-print("-Input whole numbers for Burr and Birr-")
-burrbirr = Burr_Birr()
+            self.set_burrbirr_values()
+       
 
 
+handler = Handler() #Initialize the Handler object
 
-for number in range(iterator.start, iterator.end):
-    burr = number % burrbirr.chosen_burr == 0
-    birr = number % burrbirr.chosen_birr == 0
+for number in range(handler.iterator_start, handler.iterator_end):
+    burr = number % handler.chosen_burr == 0
+    birr = number % handler.chosen_birr == 0
 
     output = "Burr Birr" if burr and birr else "burr" if burr else "birr" #Sets the variable output to either Burr or Birr or both.
 
