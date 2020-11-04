@@ -1,6 +1,6 @@
 import random
 
-class Handler:
+class InputHandler:
     iterator_start: int
     iterator_end: int
 
@@ -39,7 +39,7 @@ class Handler:
        
 
 
-handler = Handler() #Initialize the Handler object
+handler = InputHandler() #Initialize the InputHandler object
 
 for number in range(handler.iterator_start, handler.iterator_end):
     burr = number % handler.chosen_burr == 0
