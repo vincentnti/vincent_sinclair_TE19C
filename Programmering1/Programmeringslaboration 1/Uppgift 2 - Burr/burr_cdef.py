@@ -20,7 +20,7 @@ class Handler:
             self.iterator_start = int(input("Start värde: "))
             self.iterator_end = int(input("Slut värde: "))
             self.iterator_end += 1
-
+            
             if (self.iterator_end < self.iterator_start):
                 print("Error: No iterating backwards!")
                 self.set_iterator_values()
