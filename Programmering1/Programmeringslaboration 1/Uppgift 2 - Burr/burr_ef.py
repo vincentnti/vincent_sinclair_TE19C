@@ -20,7 +20,7 @@ class Iterator:
         except:
             print("Error: That was not a positive whole number!")
             self.take_input()
-            
+
 class Burr_Birr:
     chosen_burr: int
     chose_birr: int
@@ -28,6 +28,7 @@ class Burr_Birr:
         self.set_variables()
 
     def set_variables(self):
+        #Takes input and checks if it's acceptable if not have the user try again.
         try:
             self.chosen_burr = int(input("Set Burr: "))
             self.chosen_birr = int(input("Set Birr: "))
