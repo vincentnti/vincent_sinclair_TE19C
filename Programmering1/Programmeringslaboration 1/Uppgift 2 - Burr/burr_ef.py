@@ -20,17 +20,31 @@ class Iterator:
         except:
             print("Error: That was not a positive whole number!")
             self.take_input()
+            
+class Burr_Birr:
+    chosen_burr: int
+    chose_birr: int
+    def __init__ (self):
+        self.set_variables()
 
-print("-Input positive whole numbers to iterate upon-")
+    def set_variables(self):
+        try:
+            self.chosen_burr = int(input("Set Burr: "))
+            self.chosen_birr = int(input("Set Birr: "))
+        except:
+            print("Error: That was not a whole number")
+            self.set_variables()
+
+print("-Input whole numbers to iterate upon-")
 iterator = Iterator() #Initialize the iterator object
+print("-Input whole numbers for Burr and Birr-")
+burrbirr = Burr_Birr()
 
-print("-Input positive whole numbers for Burr and Birr-")
-chosen_burr = int(input("Set Burr: "))
-chosen_birr = int(input("Set Birr: "))
+
 
 for number in range(iterator.start, iterator.end):
-    burr = number % chosen_burr == 0
-    birr = number % chosen_birr == 0
+    burr = number % burrbirr.chosen_burr == 0
+    birr = number % burrbirr.chosen_birr == 0
 
     output = "Burr Birr" if burr and birr else "burr" if burr else "birr" #Sets the variable output to either Burr or Birr or both.
 
