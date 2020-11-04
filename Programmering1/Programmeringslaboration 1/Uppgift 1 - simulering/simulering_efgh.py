@@ -13,12 +13,14 @@ class Board:
     hit_ratio = 0.0
 
     def __init__ (self, throw_amount):
+        #Initialize point objects and add them to a array
         for _ in range(0, throw_amount):
             self.Points.append(Point())
 
         self.total_throws = throw_amount
 
     def check_board (self):
+        #Looks at all the points on the board and where they are relative to the circle and if they've hit. 
         for point in self.Points:
             distance = self.calc_distance(point.x, point.y)
             if self.in_circle(distance):
@@ -49,13 +51,15 @@ class Board:
         Det vi igentligen nästan gör är att delar arean av cirkeln på arean av rektangeln för att få förhållandet mellan dem.
         När radien är 1 blir arean på cirkeln Pi och arean på rektangeln 4. Ifall vi multiplicerar förhållandet med 4 får vi Pi.
         Oavsätt var radien är kommer förhållandet vara samma, detta gör då att vi alltid kan ta förhållandet mellan cirkeln och
-        kvadraten multiplicerat med 4 för att få Pi.
+        kvadraten multiplicerat med 4 för att få Pi. Ända skillnaden med större radier som då ökar både cirkelns och kvadratens 
+        areor kommer vara att man kommer behöva fler punkter för att komma upp i förhållandet.
         """
         print("Hit radio multiplied by 4: ", self.hit_ratio * 4) 
     
     def convert_point_to_dart(self, points):
         darts = []
 
+        #Gives all point objects graphics using it's data.
         for point in points:
             if point.hit:
                 darts.append(plt.Circle((point.x,point.y), radius=0.01, linewidth=1, color="Green", zorder=0))

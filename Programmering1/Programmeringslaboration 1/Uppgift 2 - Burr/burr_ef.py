@@ -3,10 +3,12 @@ import random
 class Iterator:
     start: int
     end: int
+    
     def __init__(self):
         self.take_input()
 
     def take_input(self):
+        #Takes input and checks if it's acceptable if not have the user try again.
         try:
             self.start = int(input("Start värde: "))
             self.end = int(input("Slut värde: "))
@@ -20,13 +22,13 @@ class Iterator:
             self.take_input()
 
 print("-Input positive whole numbers to iterate upon -")
-iterator = Iterator()
+iterator = Iterator() #Initialize the iterator object
 
 for number in range(iterator.start, iterator.end):
     burr = number % 5 == 0
     birr = number % 3 == 0
 
-    output = "Burr Birr" if burr and birr else "burr" if burr else "birr"
+    output = "Burr Birr" if burr and birr else "burr" if burr else "birr" #Sets the variable output to either Burr or Birr or both.
 
     if burr or birr: 
         print(output) 
