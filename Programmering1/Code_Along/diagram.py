@@ -11,5 +11,3 @@ print(a_vals)
 
 plt.plot(a_vals)
 plt.show()
-
-#Gå till kod stugan
