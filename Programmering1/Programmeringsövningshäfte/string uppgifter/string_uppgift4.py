@@ -1,5 +1,11 @@
 sentence = "Do not worry about your difficulties in Mathematics. I can assure you mine are still greater."
-eng_vowels = ["a", "o", "u", "e", "i", "y"]
+sentence = sentence.lower()
+
+eng_vowels = ["a", "o", "u", "e", "i"]
+total_vowels = 0
+
 for vowel in eng_vowels:
-    print(f"The sentence has {sentence.count(vowel)} {vowel}")
+    total_vowels += sentence.count(vowel) 
+
+print(f"The sentence has {total_vowels} vowels")
 

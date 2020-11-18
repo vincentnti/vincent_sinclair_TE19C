@@ -35,6 +35,8 @@ elif encrypt == "de":
 word = list(word)
 
 for i in range(len(word)):
-    word[i] = alfabet[alfabet.find(word[i]) + encrypt ]
+    if len(alfabet) + encrypt > len(alfabet):
+        encrypt = encrypt - len(alfabet)
+    word[i] = alfabet[alfabet.find(word[i]) + encrypt]
 
 print(''.join(word))
