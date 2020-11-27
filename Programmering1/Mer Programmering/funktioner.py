@@ -1,0 +1,3 @@
+#Funktioner
+#Inparametrar
+#...
