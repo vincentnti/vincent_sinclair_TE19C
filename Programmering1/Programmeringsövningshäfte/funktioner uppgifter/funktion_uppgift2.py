@@ -11,5 +11,6 @@ nf = int(input("Set n final: "))
 
 def iter_summa(ns, nf):
     for i in range(ns, nf + 1):
-        print(summa(i))
-#INTE KLAR
+        print(f"Svaret blir {summa(i)} på position {i}")
+
+iter_summa(ns, nf)
