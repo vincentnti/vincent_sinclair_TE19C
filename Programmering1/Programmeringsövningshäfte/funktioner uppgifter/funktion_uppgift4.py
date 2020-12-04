@@ -16,12 +16,12 @@ def konv_till_lämpliga_pengar(cash):
         "Femhundralappar: ",
         "Tvåhundralappar: ",
         "Hundralappar: ",
-        "femtilappar: ",
-        "tjugolappar: ",
-        "tiokroner: ",
-        "femkroner: ",
-        "tvåkroner: ",
-        "enkroner: "
+        "Femtilappar: ",
+        "Tjugolappar: ",
+        "Tiokroner: ",
+        "Femkroner: ",
+        "Tvåkroner: ",
+        "Enkroner: "
     ]
     for i, amount in enumerate(amounts):
         print(names[i], int(cash / amount))
