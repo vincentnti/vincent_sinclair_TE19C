@@ -23,12 +23,8 @@ def konv_till_lämpliga_pengar(cash):
         "tvåkroner: ",
         "enkroner: "
     ]
-    i = 0
-    for amount in amounts:
+    for i, amount in enumerate(amounts):
         print(names[i], int(cash / amount))
-        i+= 1
         cash -= int(cash / amount) * amount
 
 konv_till_lämpliga_pengar(13353)
-
-#Fungerar men vill ändra lite 
