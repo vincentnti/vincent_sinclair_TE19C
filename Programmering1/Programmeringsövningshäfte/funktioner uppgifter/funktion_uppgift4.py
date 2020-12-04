@@ -24,7 +24,8 @@ def konv_till_lämpliga_pengar(cash):
         "Enkroner: "
     ]
     for i, amount in enumerate(amounts):
-        print(names[i], int(cash / amount))
+        if not int(cash / amount) == 0: 
+            print(names[i], int(cash / amount))
         cash -= int(cash / amount) * amount
 
 konv_till_lämpliga_pengar(13353)
