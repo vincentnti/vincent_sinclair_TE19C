@@ -16,4 +16,11 @@ def divd(s):
 print(divd(1))
 
 #c
-#Inte klar med denna
+def div_udda (n):
+    answer = 0.0
+    for i in range(1, n + 1):
+        answer += ((-1)**(i+1))/(2*i-1)
+        print("Is now:", answer)
+    return answer
+
+print("Summa: ", div_udda(3))
