@@ -8,12 +8,13 @@ print(fakultet(2))
 print(fakultet(5))
 
 #b
-def divd(s):
-    for i in range(1,100 + 1):
-        s += s/fakultet(i)
-    return s
+def divd(n):
+    answer = 1
+    for i in range(1,n + 1):
+        answer += 1/fakultet(i)
+    return answer
 
-print(divd(1))
+print(divd(100))
 
 #c
 def div_udda (n):
