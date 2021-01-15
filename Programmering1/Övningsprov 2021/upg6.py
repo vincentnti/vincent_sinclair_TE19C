@@ -8,6 +8,9 @@ title screen maybe
 
 classer
 """
+
+#Not done here yet
+
 import random
 
 class Game:
