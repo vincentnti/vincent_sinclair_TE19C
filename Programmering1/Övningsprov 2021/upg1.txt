@@ -1,0 +1,8 @@
+Här först deklareras två variabler birds som innehåller värdet 
+8000 och year som innehåller värdert 0. I en loop halveras 
+antalet fåglar när antalet fåglar överstiger 800, 
+samtidigt som det händer så ökas året och sedan printas 
+det ut år och antal fåglar efter ändringar.
+
+I slutet kommer det printas ut
+"År 4: antal fåglar: 500"

@@ -1,0 +1,30 @@
+Här använder vi oss av mathplotlib.pyplot som används
+för graf ritande och annat. Först importeras det och 
+sedan ges det ett kortare namn "plt".
+
+Sedan har en funktion skapats kallad f som tar en inparamet
+med inparameten som behöver vara en int (då den annars ger en error)
+så gör man ett par beräkningar
+
+Först kvadrerar man talet man skickar in alltså x.
+Sedan multipliceras x med -3 sen adderas 1 till summan eller resultatet av x*-3
+
+till sist summeras resultatet av kvadrerade x och 
+-3 * x + 1.
+
+Det resultatet returneras sedan alltså skickas ut ifall 
+funktionen skulle anropas.
+
+Nedanför skapas sedan två variabler
+X som innehåller talen 0-9
+och y som innehåller resultaten av att skicka in talen
+0-9 in i funktionen f.
+
+Sedan med hjälp av pyplot så ritas det upp punkter beroende på
+variablerna.
+
+först sätts punkterna där x kopplas till x och y till y 
+i grafen.
+sedan sätts namn på basvektorerna x och y till x och year
+
+till sist visas grafen.
