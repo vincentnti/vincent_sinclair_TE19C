@@ -1,16 +1,17 @@
 """
 Todo list:
 ---------
-Lista multiplikations problem random CHECK
-Låt användaren sätta svårehetsgrad alltså tid CHECK
-countdown CHECK 
-score CHECK
-title screen CHECK
-classer CHECK
+List random problems CHECK
+Let user set difficulty through time CHECK
+A Timer CHECK 
+Score CHECK
+Title screen CHECK
+Use Classes CHECK
 
 Optional extras:
-Live countdown
+Live countdown/Display countdown
 Set timer instance as attribute directly if that is possible
+Move things in play_game() into seperate functions (Not necessary at all)
 """
 import sys
 import random
@@ -104,8 +105,6 @@ class Timer:
         while self.time_left > 0:
             time.sleep(1)
             self.time_left -= 1
-            print("Hello")
-            print("\033[%d;%dH" % (1,1))
         self.times_up = True
 
 class Problem:
