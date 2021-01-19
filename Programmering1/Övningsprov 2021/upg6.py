@@ -1,16 +1,17 @@
 """
-Lista multiplikations problem random
-Låt användaren sätta svårehetsgrad alltså tid
-countdown
-score
-title screen maybe
+Todo list:
+---------
+Lista multiplikations problem random CHECK
+Låt användaren sätta svårehetsgrad alltså tid CHECK
+countdown CHECK 
+score CHECK
+title screen CHECK
+classer CHECK
 
-
-classer
+Optional extras:
+Live countdown
+Set timer instance as attribute directly if that is possible
 """
-
-#Not done here yet
-
 import sys
 import random
 import time
@@ -22,27 +23,49 @@ class Game:
     timer: classmethod
 
     def __init__ (self):
-        self.timer = Timer() #This works but idk if it's the best way to do it might be better to set it direcly or approuching it some other way
-        #Title thingy? Press Start etc
-        self.setup() #Gameplay settings setup
+        self.timer = Timer()
+        self.print_title()
+        self.setup()
         self.play_game()
-        #self.start_game() etc
+
+    def print_title(self):
+        title = """
+        :::   :::   :::    ::: :::    ::::::::::: ::::::::::: :::::::::     :::     ::::::::::: ::::    ::: 
+      :+:+: :+:+:  :+:    :+: :+:        :+:         :+:     :+:    :+:  :+: :+:       :+:     :+:+:   :+:  
+    +:+ +:+:+ +:+ +:+    +:+ +:+        +:+         +:+     +:+    +:+ +:+   +:+      +:+     :+:+:+  +:+   
+   +#+  +:+  +#+ +#+    +:+ +#+        +#+         +#+     +#++:++#+ +#++:++#++:     +#+     +#+ +:+ +#+    
+  +#+       +#+ +#+    +#+ +#+        +#+         +#+     +#+       +#+     +#+     +#+     +#+  +#+#+#     
+ #+#       #+# #+#    #+# #+#        #+#         #+#     #+#       #+#     #+#     #+#     #+#   #+#+#      
+###       ###  ########  ########## ###     ########### ###       ###     ### ########### ###    ####
+            """
+        print(title)       
 
     def setup (self):
         print("Set time limit for each problem!")
-        time_limit = int(input("Time Limit: "))
+        time_limit = int(input("Time limit (in seconds): "))
         self.timer.set_timer(time_limit)
 
-        print("Ready to start?")
-        if input("(Y/n): ") == "n":
+        if input("Ready to start [Y/n]!? ") == "n":
             self.exit_game()
 
     def play_game (self):        
+        prompt = Thread(target=self.get_answer)
+        prompt.daemon = True #Allows us too exit the program while this is active
+        prompt.start()
+        while True:
+            if self.timer.times_up:
+                print("\nYou ran out of time before you managed to answer! Game over!")
+                self.exit_game()
+            else:
+                time.sleep(0.1)
+
+    def get_answer(self):
         self.timer.start_timer()
 
         while True:
             problem = Problem()
-            print("What is: ", problem.Text)
+            
+            print(f"What is {problem.Text}?")
 
             if problem.Answer == int(input("Answer: ")):
                 print("Nice job! Next question,")
@@ -52,16 +75,10 @@ class Game:
                 print("Correct answer was:", problem.Answer)
                 print("What was that? Game over!")
                 self.exit_game()
-            
-            if self.timer.time_left < 1:
-                print("You ran out of time before you managed to answer! Game over!")
-                self.exit_game()
-
 
     def calc_score(self):
         self.answered += 1
-        self.score += self.timer.time_left #Placeholder score will be calc using time left for each question
-
+        self.score += self.timer.time_left * (self.timer.time_limit**-1 + 1)
     def exit_game(self):
         print("Score:", self.score, "Questions Answered:", self.answered)
         sys.exit(0)
@@ -69,6 +86,7 @@ class Game:
 class Timer:
     time_limit = 0
     time_left = 0
+    times_up = False
 
     def set_timer (self, time):
         self.time_limit = time
@@ -86,9 +104,9 @@ class Timer:
         while self.time_left > 0:
             time.sleep(1)
             self.time_left -= 1
-            print("Time left:", self.time_left, end="\r") #Not required to print this out but it would be fun
-
-    
+            print("Hello")
+            print("\033[%d;%dH" % (1,1))
+        self.times_up = True
 
 class Problem:
     Text = ""
