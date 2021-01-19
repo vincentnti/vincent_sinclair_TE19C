@@ -12,6 +12,7 @@ Optional extras:
 Live countdown/Display countdown
 Set timer instance as attribute directly if that is possible
 Move things in play_game() into seperate functions (Not necessary at all)
+Reward the player through score depending on how low the time limit the player chose is. 
 """
 import sys
 import random
