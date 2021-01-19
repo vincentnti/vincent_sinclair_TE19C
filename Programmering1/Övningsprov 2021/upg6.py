@@ -79,7 +79,7 @@ class Game:
 
     def calc_score(self):
         self.answered += 1
-        self.score += self.timer.time_left * (self.timer.time_limit**-1 + 1)
+        self.score += self.timer.time_left
     def exit_game(self):
         print("Score:", self.score, "Questions Answered:", self.answered)
         sys.exit(0)
