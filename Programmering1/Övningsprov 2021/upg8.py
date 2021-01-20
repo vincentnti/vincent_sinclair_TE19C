@@ -26,6 +26,9 @@ names= [
 def convert_to_bills(cash):
     for i, amount in enumerate(amounts):
         if int(cash / amount) != 0:
-            print(f"{amounts[i]}: {int(cash / amount)}")
+            print(f"{names[i]}: {int(cash / amount)}")
         cash -= amount * int(cash / amount)
-convert_to_bills(9909)
+
+print("Skriv ett tal du vill konvertera till mynt/sedlar")
+cash = int(input("Tal: "))
+convert_to_bills(cash)
