@@ -3,7 +3,6 @@ def generate_pattern(n):
     for i in range(n):
        #Calculate problem amount
         problem_amount = len(rows[i]) - 1
-        print(problem_amount)
         rows.append([])
         #Add everything next to each other together
         for z in range(problem_amount):
