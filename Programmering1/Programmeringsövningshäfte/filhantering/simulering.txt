@@ -1,0 +1,35 @@
+Total: 10
+1: Kast: 3 Sannolikhet: 0.3
+2: Kast: 0 Sannolikhet: 0.0
+3: Kast: 2 Sannolikhet: 0.2
+4: Kast: 3 Sannolikhet: 0.3
+5: Kast: 0 Sannolikhet: 0.0
+6: Kast: 2 Sannolikhet: 0.2
+Total: 100
+1: Kast: 13 Sannolikhet: 0.13
+2: Kast: 20 Sannolikhet: 0.2
+3: Kast: 16 Sannolikhet: 0.16
+4: Kast: 24 Sannolikhet: 0.24
+5: Kast: 18 Sannolikhet: 0.18
+6: Kast: 19 Sannolikhet: 0.19
+Total: 1000
+1: Kast: 187 Sannolikhet: 0.187
+2: Kast: 178 Sannolikhet: 0.178
+3: Kast: 177 Sannolikhet: 0.177
+4: Kast: 193 Sannolikhet: 0.193
+5: Kast: 170 Sannolikhet: 0.17
+6: Kast: 205 Sannolikhet: 0.205
+Total: 10000
+1: Kast: 1891 Sannolikhet: 0.1891
+2: Kast: 1754 Sannolikhet: 0.1754
+3: Kast: 1838 Sannolikhet: 0.1838
+4: Kast: 1939 Sannolikhet: 0.1939
+5: Kast: 1797 Sannolikhet: 0.1797
+6: Kast: 1891 Sannolikhet: 0.1891
+Total: 100000
+1: Kast: 18593 Sannolikhet: 0.18593
+2: Kast: 18501 Sannolikhet: 0.18501
+3: Kast: 18438 Sannolikhet: 0.18438
+4: Kast: 18478 Sannolikhet: 0.18478
+5: Kast: 18596 Sannolikhet: 0.18596
+6: Kast: 18504 Sannolikhet: 0.18504
